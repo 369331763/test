@@ -1,0 +1,6 @@
+<template name="qrcode">
+  <view class="qrcode">
+    <contact-button class="kefu" type="default-light" size="28" session-from="weapp" >
+    </contact-button>
+  </view>
+</template>

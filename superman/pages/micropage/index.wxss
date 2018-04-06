@@ -1,0 +1,12 @@
+@import "/wxSearch/wxSearch.wxss";
+.button_radius{
+  border-radius:34px;
+  color:#fff;
+  margin-top:37px;
+}
+
+.button_radius_hover{
+  border-radius:34px;
+  color:#fff;
+  margin-top:37px;
+}

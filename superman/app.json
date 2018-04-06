@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/welcome",
+    "pages/micropage/index",
+    "pages/myhome/index",
+    "pages/logs/logs",
+    "pages/article/article",
+    "pages/article/addnew/addnew/addnew",
+    "pages/article/addnew/text/text",
+    "pages/article/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "超级微页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/welcome",
+        "text": "主页",
+        "iconPath": "images/icons/icon-main.png",
+        "selectedIconPath": "images/icons/icon-main-hit.png"
+      },
+      {
+        "text": "单页",
+        "pagePath": "pages/micropage/index",
+        "iconPath": "images/icons/icon-quick.png",
+        "selectedIconPath": "images/icons/icon-quick-hit.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/myhome/index",
+        "iconPath": "images/icons/icon-user.png",
+        "selectedIconPath": "images/icons/icon-user-hit.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 50000
+  },
+  "debug": true
+}

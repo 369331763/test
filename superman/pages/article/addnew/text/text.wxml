@@ -1,0 +1,13 @@
+<!-- index.wxml -->
+<form bindsubmit="onSubmit">
+    <view class="container">
+        <view class='row' catchtap="onFocus">
+            <textarea class='text' maxlength="5000" auto-height="true" placeholder-class="placeholder" name="content" auto-focus="true" placeholder="点击添加文本" 
+                      value="{{content}}" />
+        </view>
+        <view class='bottom'>
+            <button formType="submit" class='btn success'>保存</button>
+            <button class='btn del' bindtap="goToBack">返回</button>
+        </view>
+    </view>
+</form>

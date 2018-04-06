@@ -1,0 +1,20 @@
+<view class="container">
+<import src="../../wxSearch/wxSearch.wxml"  />
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="长按粘贴公众号链接" value="{{wxSearchData.value}}" bindinput="wxSearchInput"
+                     />
+                     <!--  bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur" -->
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+    </view>
+</view>
+<button  class="button_radius" hover-class="button_radius_hover" bindtap="quickImport">一键导入</button>
+<button  class="button_radius" hover-class="button_radius_hover" bindtap="createnew">新建文章</button>
+<button  class="button_radius" hover-class="button_radius_hover" bindtap="findMore">发现文章</button>
+<template is="wxSearch" data="{{wxSearchData}}"  />
+</view>
