@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
   <swiper indicator-dots="true" autoplay="true" interval="3000" duration="800" class="swiper-banner bg-white">
     <block wx:for="{{banners}}" wx:key="item.id">
       <swiper-item>
@@ -28,6 +29,52 @@
     </view>
   </view>
 
+
+
+    <block wx:for="{{feed}}" wx:key="question_id" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+        <view class="feed-item">
+            <view class="feed-source">
+                <a class="">
+                    <view class="avatar" bindtap="seeAuthor">
+                        <image src="{{item.feed_source_img}}"></image>
+                    </view>
+                    <text>{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+                </a>
+                <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>
+            </view>
+            <view class="feed-content">
+                <view class="question" data-id="{{item.question_id}}" bindtap="bindQueTap">
+                    <a class="question-link">
+                        <text>{{item.question}}</text>
+                    </a>
+                </view>
+                <view class="answer-body">
+                    <view data-id="{{item.question_id}}" bindtap="bindItemTap">
+                        <text class="answer-txt" aid="{{answer_id}}">{{item.answer_ctnt}}</text>
+                    </view>
+                    <view class="img-line">
+                    <image mode="widthFix" src="../../images/notice-1.png" style="width:30%;"></image>
+                    <image mode="widthFix" src="../../images/notice-2.png" style="width:30%;"></image>
+                    <image mode="widthFix" src="../../images/notice-3.png" style="width:30%;"></image>
+                  </view>
+                    <view class="answer-actions" >
+                        <view class="comments dot">
+                            <a>{{item.view_num}} 阅读 </a>
+                        </view>
+                        <view class="dot">
+                            <a>健康</a>
+                        </view>
+                        <view class="dot">
+                            <a>减肥</a>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</scroll-view>
+
+<!-- 
   <swiper-item>
     <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
       <view class="noticeList bg-white">
@@ -45,7 +92,9 @@
       <view style="height:12rpx;background-color:#eaeaea"></view>
     </scroll-view>
   </swiper-item>
-
+-->
 </view>
+
+
 <import src="../../template/template.wxml" />
 <template is="qrcode" />

@@ -4,6 +4,7 @@
     "pages/micropage/index",
     "pages/myhome/index",
     "pages/logs/logs",
+    "pages/myadd/myadd",
     "pages/article/article",
     "pages/article/addnew/addnew/addnew",
     "pages/article/addnew/text/text",
@@ -13,7 +14,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "超级微页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#7A7E83",

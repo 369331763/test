@@ -2,6 +2,7 @@
 const app = getApp()
 Page({
   data: {
+    userInfo:{},
     item: {
       imagesrc: "../../images/mine/arrow_right_setup_12x16_@2x.png",
       imagename: "我的推荐"
@@ -28,19 +29,40 @@ Page({
      ]
   },
   onLoad: function (options) {
+    var that = this
     // 页面初始化 options为页面跳转所带来的参数
     var user= app.globalData.userInfo;
     if (!user) {
       wx.login({
         success: function (res) {
           var code = res.code;
+          wx.request({
+            url: "http://localhost:8080/easy-shopping/article/jsonlist.jhtml",
+            data: {
+              category: 8, pageNumber: 5
+            },
+            header: {
+              "Content-Type": "application/json"
+            },
+            success: function (res) {
+
+            }
+          });
+          
+
+
+
           wx.getUserInfo({
             success: function (res) {
+              that.setData({
+                userInfo: res
+              })
               debugger
               // 当用户授权成功的时候，保存用户的登录信息
-              console.log(res2);
-              var encryptedData = encodeURIComponent(res2.encryptedData);//一定要把加密串转成URI编码
-              var iv = res2.iv;
+              console.log(res);
+              var encryptedData = encodeURIComponent(res.encryptedData);//一定要把加密串转成URI编码
+              var iv = res.iv;
+              console.log("iv:" + iv + " encryptedData:" + encryptedData);
           //请求自己的服务器
             },
             fail: function (res) { //用户点了“拒绝”
@@ -60,6 +82,11 @@ Page({
       })
     }
   })
+}else{
+        //更新数据
+        that.setData({
+          userInfo: user
+        })
 }
   },
   onReady: function () {

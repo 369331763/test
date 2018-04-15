@@ -1,5 +1,4 @@
-var hotapp = require('../../../../utils/hotapp.js');
-var api = require('../../../../utils/api.js');
+
 
 Page({
     data: {

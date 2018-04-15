@@ -1,5 +1,14 @@
 <!--pages/article/article.wxml-->
 <import src="../../wxParse/wxParse.wxml"/>
+<view class="user flex-wrp" data-userid="1" bindtap="seeAuthor">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="edit">主页</text>
+    </view>
+  </view>
 <view class="article-content">
 {{createDate}}  {{author}}
 <template is="wxParse" data="{{wxParseData:article.nodes}}"/>

@@ -1,18 +1,56 @@
-<template name="topview">
-    <text> {{item.imagename}} </text>
-    <image src="{{item.imagesrc}}" mode="aspectFit" style="width: 30px; height: 30px; background-color: transparent;"></image>
-</template>
+   <view class="question" bindtap="toQuestion">
+        <text class="question-title">{{userInfo.nickName}}-的个人主页</text>
+    </view>
+    <view class="answerer-wrp">
+        <view class="bg-half"></view>
+        <view class="answerer flex-wrp">
+            <view class="avatar flex-item">
+                <image   src="{{userInfo.avatarUrl}}"></image>
+            </view>
+        </view>
+        <view class="usertip">
+          <text >创作了18篇文章，发布7篇文章，被访问1.3W次</text>
+        </view>
+         
+    </view>
+
+<view class="my">
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的关注</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/star.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的收藏</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/draft.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的草稿</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/recent.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>最近浏览</text>
+      </view>
+    </view>
+    </view> 
+
 
 <view class="main">
-    <view class="topview">
-    <view class="imageContainer">
-        <image class="images" src="../../images/mine/weixinicon_login_profile_78x78_.png" mode="aspectFit" style="width: 60px; height: 60px; background-color: transparent;"></image>
-        <image class="images" src="../../images/mine/qqicon_login_profile_78x78_@2x.png" mode="aspectFit" style="width: 60px; height: 60px; background-color: transparent;"></image>
-        <image class="images" src="../../images/mine/sinaicon_login_profile_78x78_@2x.png" mode="aspectFit" style="width: 60px; height: 60px; background-color: transparent;"></image>
-        <image class="images" src="../../images/mine/cellphoneicon_login_profile_78x78_@2x.png" mode="aspectFit" style="width: 60px; height: 60px; background-color: transparent;"></image>
-    </view>
-    <button class="morebutton" >点击登录 ></button>
-    </view>
      <view class="btopview">
                  <text style="font-size:23px;color:black;font-weight:bold"> 邀请好友注册VIP会员有惊喜 </text>
             </view>

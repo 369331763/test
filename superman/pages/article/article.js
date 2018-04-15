@@ -1,7 +1,9 @@
 // pages/article/article.js
+const app = getApp()
 var WxParse = require('../../wxParse/wxParse.js');
 Page({
   data:{
+    userInfo: {},
     article: '',
     author:'',
     createDate:''
@@ -10,6 +12,13 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var article='';
     var that = this;
+
+    var user = app.globalData.userInfo;
+
+    //更新数据
+    that.setData({
+      userInfo: user
+    })
     //var desturl = "https://mp.weixin.qq.com/s?__biz=MzIxNTQwMjUyMQ==&mid=100000001&idx=1&sn=3bda2f4c0419b94214d4a18ec1c8ec3f&mpshare=1&scene=23&srcid=0305TynJ0SUE7NmJsh8R2Oby#rd";
     var url = "http://localhost:80820/easy-shopping/article/jsonarticle.jhtml";
     //var url = "http://localhost:8080/easy-shopping/article_import/quickstart.jhtml";
@@ -47,5 +56,11 @@ Page({
     
 
 
+  },
+  seeAuthor:function (event){
+    var userid = event.currentTarget.dataset.userid;
+    wx.navigateTo({
+      url: "../myadd/myadd?userid=" + userid
+    })
   }
 })

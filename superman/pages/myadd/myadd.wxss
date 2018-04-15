@@ -1,0 +1,160 @@
+.flex-wrp{
+  display: flex;
+}
+.flex-item{
+  flex-grow: 1;
+  text-align: center;
+}
+.topBanner {
+    position: relative;
+    width: 100%;
+     height: 230rpx;
+    padding: 40rpx 50rpx 30rpx;
+    background: #298DE5;
+    color: #fff;
+    font-size: 38rpx;
+    line-height: 48rpx;
+    text-align: center;
+}
+.answer-txt{
+line-height:33rpx;
+}
+.img-line{
+  display:flex;flex-wrap:wrap;justify-content:space-between;
+}
+
+.answerer-wrp{
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+    background: #fff;
+}
+.answerer-wrp .bg-half{
+    position: absolute;
+    top: 0;
+    width: 750rpx;
+    height: 100rpx;
+    background: #298DE5;
+}
+.answerer-wrp .usertip{
+  text-align:center;
+  padding:35rpx;
+}
+.answerer {
+    position:relative;
+    margin:0 auto;
+    width:200rpx;
+    height:200rpx;
+    padding:9rpx 9rpx;
+    background:#fff;
+    border:solid 1px #ebebeb;
+    border-radius:110rpx;
+    box-shadow:0 1px 2px #bebebe;
+    text-align:center;
+}
+
+.answerer .avatar {
+    flex: 1;
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.answerer .avatar image {
+    display: inline-block;
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 90rpx;
+}
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*padding: 200rpx 0;*/
+  box-sizing: border-box;
+  background: #F0F4F3;
+}
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  color: #000;
+}
+.container .feed-item{
+  width: 100%;
+  padding: 30rpx 30rpx 20rpx;
+  margin: 7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+.container .feed-item .feed-source{
+  width: 690rpx;
+  left: 0;
+  height: 50rpx;
+}
+.container .feed-item .feed-source .avatar{
+  position: relative;
+  display: inline-block;
+}
+.container .feed-item .feed-source a{
+  display: inline-block;
+  height: 40rpx;
+}
+.container .feed-item .feed-source .avatar image{
+  /*position: absolute;*/
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.container .feed-item .feed-source text{
+  /*position: absolute;*/
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 0 15rpx;
+  color: #a0acac;
+  font-size: 26rpx;
+}
+.container .feed-item .feed-source .item-more{
+  display: inline-block;
+  width: 40rpx;
+  height: 45rpx;
+  float: right;
+}
+.container .feed-item .feed-content{
+  padding: 10rpx 0 0 0;
+}
+.container .feed-item .feed-content .question text{
+  font-size: 33rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  text-space: 5rpx;
+}
+.container .feed-item .feed-content .answer-body{
+  padding: 10rpx 0 0 0;
+  /*height: 10rpx;*/
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #5b5b5b;
+}
+.container .feed-item .feed-content .answer-actions{
+  width: 690rpx;
+  padding: 10rpx 0  0;
+  color: #a0acac;
+}
+.container .feed-item .feed-content .answer-actions view{
+  display: inline-block;
+  vertical-align: text-bottom;
+  padding: 0 10rpx 0 0;
+  font-size: 24rpx;
+}
+.container .feed-item .feed-content .answer-actions .dot ::after{
+  content: "•";
+}

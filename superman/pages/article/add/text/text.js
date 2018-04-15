@@ -1,5 +1,3 @@
-var hotapp = require('../../utils/hotapp.js');
-var api = require('../../utils/api.js');
 
 Page({
     data: {
@@ -23,10 +21,14 @@ Page({
     /* 页面渲染事件 */
     onShow: function () {
         var item = this.data.item;
-        item.key = hotapp.genPrimaryKey('item');
+       /**
+        * 
+         item.key = hotapp.genPrimaryKey('item');
         this.setData({
             item: item
         });
+        **
+        */
     },
 
     /* 保存数据事件 */
@@ -53,23 +55,6 @@ Page({
         this.setData({
             item: item
         });
-        api.store(this.data.item, function (res) {
-            if (res) {
-                wx.showToast({
-                    title: "保存成功",
-                    success: function () {
-                        // 返回首页
-                        setTimeout(function () {
-                            wx.hideToast();
-                            wx.navigateBack();
-                        }, 1000)
-                    }
-                });
-            } else {
-                wx.showToast({
-                    title: "保存失败"
-                });
-            }
-        });
+        
     }
 });
